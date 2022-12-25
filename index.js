@@ -1,7 +1,6 @@
 const btnEl=document.getElementById("btn");
 const emojiNameEl=document.getElementById("emoji-name");
 
-
 const emoji = [];
 
 async function getEmoji(){
@@ -19,16 +18,14 @@ async function getEmoji(){
     }
 }
 
-
 getEmoji();
 // console.log(emoji);
 
 btnEl.addEventListener("click",()=>{
 
     const randomNum = Math.floor(Math.random() * emoji.length);
-    // console.log(randomNum);
+    console.log(randomNum);
     btnEl.innerText = emoji[randomNum].emojiName;
     emojiNameEl.innerText = emoji[randomNum].emojiCode;
-
 
 });
